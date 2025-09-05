@@ -56,9 +56,12 @@ socialNetworkAds_ML_2/
 Run the Flask App - Go to the model folder and start the app:
 
 cd ../model python app.py
+
 ---
+
 ## 📂 You can view the presentation here:  
 [Social Network Ads – Presentation](./ML_task2.pptx)
+
 ---
 ## 🙌 Acknowledgement
 This project helped me explore different Machine Learning classification models step by step, analyze their performance, and finally deploy the best-performing model (Random Forest Classifier) using Flask.
