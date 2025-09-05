@@ -57,15 +57,8 @@ Run the Flask App - Go to the model folder and start the app:
 
 cd ../model python app.py
 
-<<<<<<< HEAD
-📂 You can view the presentation here:  
-[Social Network Ads – Presentation](./ML_Task2.pptx)
-=======
----
-
 ## 📂 You can view the presentation here:  
-[Social Network Ads – Presentation](./ML_task2.pptx)
->>>>>>> 2c752ee42b0b4794614d193924c03d9a6e468d34
+[Social Network Ads – Presentation](./ML_Task2.pptx)
 
 ---
 ## 🙌 Acknowledgement
