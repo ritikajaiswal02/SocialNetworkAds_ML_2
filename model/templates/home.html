@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Network Ads</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #e6f7ff;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScjhDCBr2IQFuOqMncAjssHA1nR5KppTtuYA&s);
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-position: center; */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .container h1{
+            color: purple;
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        .card {
+            margin-top: 30px;
+            width: 350px;
+            padding: 20px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 12px;
+            background-color: rgba(170, 56, 170, 0.831);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+            border: 2px solid rgb(94, 11, 94);
+        }
+
+        .card form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            display: flex;
+            margin-top: 60px;
+            flex-direction: column;
+            font-weight: bold;
+            color: whitesmoke;
+            font-size: 25px;
+        }
+
+        input[type="range"],
+        input[type="number"] {
+            margin-top: 5px;
+            padding: 8px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+        }
+
+        input[type="number"] {
+            background: white;
+        }
+
+        .ans{
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            background-color: purple;
+        }
+
+        #ageValue {
+            font-weight: bold;
+            margin-left: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        #btn{
+            width: 40%;
+            padding: 10px 5px;
+            margin: auto;
+            font-weight: bold;
+            font-size: 22px;
+            border-radius:15px ;
+            border:1px solid purple;
+            color: rgb(152, 13, 152);
+            background-color: rgb(249, 197, 249);
+        }
+        
+        #btn:hover{
+            background-color: rgb(246, 123, 246);
+        }
+
+        /* =================== MEDIA QUERIES =================== */
+
+        /* Mobile (up to 480px) */
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+                gap: 20px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .card {
+                width: 95%;
+                padding: 15px;
+            }
+
+            input[type="range"],
+            input[type="number"] {
+                width: 100%;
+            }
+
+            .ans {
+                font-size: 18px;
+            }
+        }
+
+        /* Tablets (481px - 768px) */
+        @media (min-width: 481px) and (max-width: 768px) {
+            .card {
+                width: 70%;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+        }
+
+        /* Laptops (769px - 1200px) */
+        @media (min-width: 769px) and (max-width: 1200px) {
+            .card {
+                width: 50%;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+        }
+
+        /* Large Screens (1201px and above) */
+        @media (min-width: 1201px) {
+            .card {
+                width: 40%;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Social Network Ads</h1>
+        <div class="card">
+            <form method="post">
+                <label for="age">Age:
+                    <input type="range" name="age" id="age" required min="18" max="60" value="30"
+                        oninput="updateAgeValue(this.value)">
+                    <span id="ageValue">(30)</span>
+                </label>
+                <label for="salary">Salary:
+                    <input type="number" name="salary" id="salary" required placeholder="Enter Salary">
+                </label>
+                <input type="submit" id="btn">
+            </form>
+        </div>
+        <div class="ans">
+            {{msg}}
+        </div>
+    </div>
+
+    <script>
+        function updateAgeValue(val) {
+            document.getElementById('ageValue').textContent = `(${val})`;
+        }
+    </script>
+</body>
+
+</html>
